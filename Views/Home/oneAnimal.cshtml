@@ -1,0 +1,15 @@
+@model Animal
+
+<h1>@Model.Species</h1>
+<h2>Number of legs : @Model.numLegs</h2>
+<h2>Is a mammel? : @{
+    if(Model.isMammal)
+    {
+        <span>Yes</span>
+    }else{
+        <span>No</span>
+    }
+}
+</h2>
+<a href="/delete/@Model.AnimalId" class="btn btn-danger">Delate</a>
+<a href="/edit/@Model.AnimalId" class="btn btn-info">Edit</a>
